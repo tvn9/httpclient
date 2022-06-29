@@ -9,9 +9,9 @@ import (
 func main() {
 	httpMethod := "GET"
 	//url := "https://api.github.com"
-	url := "https://localhost"
+	url := "http://localhost:8080"
 
-	client := http.Client{}
+	client := http.Client{} // default http client
 
 	request, err := http.NewRequest(httpMethod, url, nil)
 	if err != nil {
